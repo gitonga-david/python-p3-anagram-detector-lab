@@ -4,8 +4,5 @@ class Anagram:
         self.word = word
 
     def match(self, anagrams):
-        list_anagrams = []
-        for anagram in anagrams:
-            if sorted(anagram) == sorted(self.word):
-                list_anagrams.append(anagram)
-        return list_anagrams
+       return [anagram for anagram in anagrams if sorted(anagram) == sorted(self.word)]
+    
